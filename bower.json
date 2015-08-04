@@ -1,0 +1,11 @@
+{
+  "name": "r-cars",
+  "version": "0.0.1",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "waypoints": null
+  }
+}

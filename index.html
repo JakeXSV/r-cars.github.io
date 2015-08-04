@@ -16,8 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="http://r-cars.github.io/images/favicon.ico">
     <link rel="apple-touch-icon" href="http://r-cars.github.io/images/apple-touch-icon.png" />
-    <link rel="stylesheet" type="text/css" href="http://r-cars.github.io/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="http://r-cars.github.io/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="./css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="./css/custom.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
     <link rel="canonical" href="http://r-cars.github.io/" />
 </head>
@@ -37,6 +37,7 @@
     <span class="nav-cover"></span>
 
     <div class="site-wrapper">
+
         <header id="splashHeader" class="main-header " style="background-image: url(http://r-cars.github.io/images/background.jpg)">
             <nav class="main-nav overlay clearfix">
                 <a class="blog-logo" href="http://r-cars.github.io/">
@@ -71,7 +72,7 @@
             </div>
 
             <!-- Post -->
-            <article class="post post">
+            <article id="article2" class="post post" data-sr='enter top, over 1s'>
                 <header class="post-header">
                     <h2 class="post-title"><a href="/post/cayman/">cayman</a></h2>
                 </header>
@@ -92,7 +93,7 @@
             </article>
 
             <!-- Post -->
-            <article class="post post">
+            <article id="article1" class="post post" data-sr='enter top, over 1s'>
                 <header class="post-header">
                     <h2 class="post-title"><a href="/post/hellcat/">hellcat</a></h2>
                 </header>
@@ -113,7 +114,7 @@
             </article>
 
             <!-- Post -->
-            <article class="post post">
+            <article id="article0" class="post post" data-sr='enter top, over 1s'>
                 <header class="post-header">
                     <h2 class="post-title"><a href="/post/camaro/">camaro</a></h2>
                 </header>
@@ -145,10 +146,13 @@
 
     </div>
 
-    <script type="text/javascript" src="http://r-cars.github.io/js/jquery.js"></script>
-    <script type="text/javascript" src="http://r-cars.github.io/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://r-cars.github.io/js/index.js"></script>
-    <script type="text/javascript" src="http://r-cars.github.io/js/googleAnalytics.js"></script>
-    <script type="text/javascript" src="http://r-cars.github.io/js/splashController.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/scrollReveal.min.js"></script>
+    <script>window.sr = new scrollReveal();</script>
+    <script type="text/javascript" src="./js/lib/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script type="text/javascript" src="./js/googleAnalytics.js"></script>
+    <script type="text/javascript" src="./js/splashController.js"></script>
 </body>
 </html>

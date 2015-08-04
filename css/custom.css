@@ -4,3 +4,7 @@
 .headerPadding {
     padding-top: 50vh;
 }
+.content {
+    /* just for testing */
+    margin-bottom: 1000px;
+}
