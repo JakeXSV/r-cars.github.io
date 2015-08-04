@@ -3,31 +3,44 @@ var isSplashMinimized = false;
 var articleWaypointsInitialized = false;
 $(window).scroll(
     function(event) {
-        var articleWaypoints = [];
 
         function setWaypoints() {
             if (!articleWaypointsInitialized) {
+                // Scroll down first article
                 new Waypoint({
                     element: document.getElementById("article2"),
                     handler: function(direction) {
-                        console.log('cayman - ' + direction);
-                        $("#splashHeader").css("background-image", "url(images/posts/cayman/header.jpg)");
+                        if (isSplashMinimized) {
+                            $("#splashHeader").css("background-image", "url(images/posts/cayman/header.jpg)");
+                        }
                     },
                     offset: '50%'
+                });
+                // Scroll up first article
+                new Waypoint({
+                    element: document.getElementById("article2"),
+                    handler: function(direction) {
+                        if (isSplashMinimized) {
+                            $("#splashHeader").css("background-image", "url(images/posts/cayman/header.jpg)");
+                        }
+                    },
+                    offset: '40%'
                 });
                 new Waypoint({
                     element: document.getElementById("article1"),
                     handler: function(direction) {
-                        console.log('hellcat - ' + direction);
-                        $("#splashHeader").css("background-image", "url(images/posts/hellcat/header.jpg)");
+                        if (isSplashMinimized) {
+                            $("#splashHeader").css("background-image", "url(images/posts/hellcat/header.jpg)");
+                        }
                     },
                     offset: '40%'
                 });
                 new Waypoint({
                     element: document.getElementById("article0"),
                     handler: function(direction) {
-                        console.log('camaro - ' + direction);
-                        $("#splashHeader").css("background-image", "url(images/posts/camaro/header.jpg)");
+                        if (isSplashMinimized) {
+                            $("#splashHeader").css("background-image", "url(images/posts/camaro/header.jpg)");
+                        }
                     },
                     offset: '40%'
                 });
@@ -38,6 +51,7 @@ $(window).scroll(
         function maximize() {
             $("#splashHeader").css("height", "100vh");
             $("#splashHeader").css("position", "relative");
+            $("#splashHeader").css("background-image", "url(http://r-cars.github.io/images/background.jpg)");
         }
 
         function minimize() {
@@ -55,12 +69,12 @@ $(window).scroll(
         }
         lastScrollTop = st;
         if (lastScrollTop === 0) {
-            maximize();
             isSplashMinimized = false;
+            maximize();
         } else {
             if (!isSplashMinimized) {
-                minimize();
                 isSplashMinimized = true;
+                minimize();
             }
         }
     }
