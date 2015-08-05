@@ -9,3 +9,11 @@
     /* just for testing */
     margin-bottom: 1000px;
 }
+.headerSocialVerticalCenter {
+    position: relative;
+    top: 60%;
+    transform: translateY(-50%);
+}
+.transparentHover {
+    background-color: transparent !important;
+}
