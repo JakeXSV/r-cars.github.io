@@ -1,11 +1,13 @@
 var lastScrollTop = 0;
 var isSplashMinimized = false;
 var articleWaypointsInitialized = false;
+var articleHoverpointsInitialized = false;
 $(window).scroll(
     function(event) {
 
+        /* on any mobile devices, scrolling changes splash image */
         function setWaypoints() {
-            if (!articleWaypointsInitialized) {
+            if (!articleWaypointsInitialized && isMobile.any) {
                 // Scroll down first article
                 new Waypoint({
                     element: document.getElementById("article2"),
@@ -48,6 +50,27 @@ $(window).scroll(
             }
         }
 
+        function setHoverpoints() {
+            if (!articleHoverpointsInitialized && !isMobile.any) {
+                $("#article2").hover(function(){
+                    if (isSplashMinimized) {
+                        $("#splashHeader").css("background-image", "url(images/posts/cayman/header.jpg)");
+                    }
+                });
+                $("#article1").hover(function(){
+                    if (isSplashMinimized) {
+                        $("#splashHeader").css("background-image", "url(images/posts/hellcat/header.jpg)");
+                    }
+                });
+                $("#article0").hover(function(){
+                    if (isSplashMinimized) {
+                        $("#splashHeader").css("background-image", "url(images/posts/camaro/header.jpg)");
+                    }
+                });
+                articleHoverpointsInitialized = true;
+            }
+        }
+
         function maximize() {
             $("#splashHeader").css("height", "100vh");
             $("#splashHeader").css("position", "relative");
@@ -59,6 +82,7 @@ $(window).scroll(
             $("#splashHeader").css("position", "fixed");
             $("#splashHeader").css("top", "0px");
             setWaypoints();
+            setHoverpoints();
         }
 
         var st = $(this).scrollTop();
