@@ -78,7 +78,7 @@ $(window).scroll(
         }
 
         function minimize() {
-            $("#splashHeader").css("height", "35vh");
+            $("#splashHeader").css("height", "15vh");
             $("#splashHeader").css("position", "fixed");
             $("#splashHeader").css("top", "0px");
             setWaypoints();
