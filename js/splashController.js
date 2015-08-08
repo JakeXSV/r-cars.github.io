@@ -2,8 +2,13 @@ var lastScrollTop = 0;
 var isSplashMinimized = false;
 var articleWaypointsInitialized = false;
 var articleHoverpointsInitialized = false;
+
 $(window).scroll(
     function(event) {
+
+        var splashSelector = '#splashHeader';
+        var splashMinimizedClass = 'splashMinimized';
+        var splashMaximizedClass = 'splashMaximized';
 
         /* on any mobile devices, scrolling changes splash image */
         function setWaypoints() {
@@ -13,7 +18,7 @@ $(window).scroll(
                     element: document.getElementById("article2"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $("#splashHeader").css("background-image", "url(images/posts/cayman/header.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/cayman/header.jpg)");
                         }
                     },
                     offset: '50%'
@@ -23,7 +28,7 @@ $(window).scroll(
                     element: document.getElementById("article2"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $("#splashHeader").css("background-image", "url(images/posts/cayman/header.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/cayman/header.jpg)");
                         }
                     },
                     offset: '40%'
@@ -32,7 +37,7 @@ $(window).scroll(
                     element: document.getElementById("article1"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $("#splashHeader").css("background-image", "url(images/posts/hellcat/header.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/hellcat/header.jpg)");
                         }
                     },
                     offset: '40%'
@@ -41,7 +46,7 @@ $(window).scroll(
                     element: document.getElementById("article0"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $("#splashHeader").css("background-image", "url(images/posts/camaro/header.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/camaro/header.jpg)");
                         }
                     },
                     offset: '40%'
@@ -54,17 +59,17 @@ $(window).scroll(
             if (!articleHoverpointsInitialized && !isMobile.any) {
                 $("#article2").hover(function(){
                     if (isSplashMinimized) {
-                        $("#splashHeader").css("background-image", "url(images/posts/cayman/header.jpg)");
+                        $(splashSelector).css("background-image", "url(images/posts/cayman/header.jpg)");
                     }
                 });
                 $("#article1").hover(function(){
                     if (isSplashMinimized) {
-                        $("#splashHeader").css("background-image", "url(images/posts/hellcat/header.jpg)");
+                        $(splashSelector).css("background-image", "url(images/posts/hellcat/header.jpg)");
                     }
                 });
                 $("#article0").hover(function(){
                     if (isSplashMinimized) {
-                        $("#splashHeader").css("background-image", "url(images/posts/camaro/header.jpg)");
+                        $(splashSelector).css("background-image", "url(images/posts/camaro/header.jpg)");
                     }
                 });
                 articleHoverpointsInitialized = true;
@@ -72,15 +77,15 @@ $(window).scroll(
         }
 
         function maximize() {
-            $("#splashHeader").css("height", "100vh");
-            $("#splashHeader").css("position", "relative");
-            $("#splashHeader").css("background-image", "url(http://r-cars.github.io/images/background.jpg)");
+            $(splashSelector).css("background-image", ""); // remove article specific image
+            $(splashSelector).removeClass(splashMinimizedClass);
+            $(splashSelector).addClass(splashMaximizedClass);
         }
 
         function minimize() {
-            $("#splashHeader").css("height", "15vh");
-            $("#splashHeader").css("position", "fixed");
-            $("#splashHeader").css("top", "0px");
+            $(splashSelector).css("background-image", ""); // remove article specific image
+            $(splashSelector).removeClass(splashMaximizedClass);
+            $(splashSelector).addClass(splashMinimizedClass);
             setWaypoints();
             setHoverpoints();
         }

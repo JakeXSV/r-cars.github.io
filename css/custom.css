@@ -1,19 +1,42 @@
+/* Splash screen and header */
 #splashHeader {
     z-index: 999;
     background-image: url(http://r-cars.github.io/images/background.jpg);
 }
-.headerPadding {
-    padding-top: 25vh;
+.splashMaximized {
+    height: 100vh;
+    position: relative;
+    background-image: url(http://r-cars.github.io/images/background.jpg);
 }
-.content {
-    /* just for testing */
-    margin-bottom: 1000px;
+.splashMinimized {
+    height: 15vh;
+    position: fixed;
+    top: 0px;
+}
+
+/* Social Icons */
+.socialIcon {
+    font-size: 2em;
+}
+@media only screen and (max-width: 500px) {
+    .socialIcon {
+        font-size: 1.2em;
+    }
+}
+.transparentHover {
+    background-color: transparent !important;
 }
 .headerSocialVerticalCenter {
     position: relative;
     top: 60%;
     transform: translateY(-50%);
 }
-.transparentHover {
-    background-color: transparent !important;
+
+/* Article styles */
+.headerPadding {
+    padding-top: 25vh;
+}
+.content {
+    /* just for testing */
+    margin-bottom: 1000px;
 }
