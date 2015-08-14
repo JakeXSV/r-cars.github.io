@@ -18,7 +18,7 @@ $(window).scroll(
                     element: document.getElementById("article2"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $(splashSelector).css("background-image", "url(images/posts/cayman/header.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/header.jpg)");
                         }
                     },
                     offset: '50%'
@@ -28,7 +28,7 @@ $(window).scroll(
                     element: document.getElementById("article2"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $(splashSelector).css("background-image", "url(images/posts/cayman/header.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/header.jpg)");
                         }
                     },
                     offset: '40%'
@@ -59,7 +59,7 @@ $(window).scroll(
             if (!articleHoverpointsInitialized && !isMobile.any) {
                 $("#article2").hover(function(){
                     if (isSplashMinimized) {
-                        $(splashSelector).css("background-image", "url(images/posts/cayman/header.jpg)");
+                        $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/header.jpg)");
                     }
                 });
                 $("#article1").hover(function(){
