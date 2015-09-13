@@ -14,11 +14,11 @@
     <meta name="description" content="everything automotive" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="./js/lib/isMobile/isMobile.min.js"></script>
-    <link rel="shortcut icon" href="./images/favicon.ico">
-    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
-    <link rel="stylesheet" type="text/css" href="./css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="./css/custom.css" />
+    <script type="text/javascript" src="/js/lib/isMobile/isMobile.min.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
     <link rel="canonical" href="http://r-cars.github.io/" />
 </head>
@@ -63,14 +63,18 @@
 
         <main id="content" class="content headerPadding" role="main">
 
+            <div id="articleSideBar">
+                <button onclick="closeMe();">close</button>
+            </div>
+
             <article id="article2" class="post post" data-sr='enter top, over 1s'>
                 <header class="post-header">
-                    <h2 class="post-title"><a href="/post/2015/8/15ChallengerRTScat">15' Challenger Scat Pack</a></h2>
+                    <h2 class="post-title"><a onclick="openArticle('/post/2015/8/15ChallengerRTScat');">15' Challenger Scat Pack</a></h2>
                 </header>
                 <section class="post-excerpt">
                     <p>“We’ll see you coming from a mile away in this thing, good luck!” he wasn’t wrong. At 17 feet long and 6 feet wide,
                     coming in at 4200 pounds and sporting a burn-your-eyes-out green paint job, this 2015 Dodge Challenger R/T Scat Pack
-                    was hard to miss. <a class="read-more" href="/post/2015/8/15ChallengerRTScat">&raquo;</a></p>
+                    was hard to miss.
                 </section>
                 <footer class="post-meta">
                     <img class="author-thumb" src="../images/logo.png" alt="Author image" nopin="nopin" /> on
@@ -91,7 +95,7 @@
                 <section class="post-excerpt">
                     <p>Commodo platonem constituam vel ea, ut vide dicit albucius usu. Exerci graece maluisset in eam, cu nulla postulant pro. Fierent explicari ne est. Vis summo detracto ei. Ex noster eruditi principes vis, dicunt graecis mei eu. Ei amet
                         convenire erroribus ius, pro nonumes noluisse signiferumque te. Sit quod quando te, erat omittam appellantur nec ne. Eos in modo semper bonorum. Cu sea porro falli iusto, laoreet tractatos voluptatum mea ei. Cum eu persequeris
-                        conclusionemque, tota nominavi in nec. <a class="read-more" href="/post/hellcat/">&raquo;</a></p>
+                        conclusionemque, tota nominavi in nec.
                 </section>
                 <!-- Author Tag -->
                 <footer class="post-meta">
@@ -112,8 +116,7 @@
                 <div data-ot="The content" data-ot-delay="2" data-ot-hide-trigger="closeButton">Hover me</div>
                 <section class="post-excerpt">
                     <p>At quo suavitate hendrerit, reque nemore sensibus ne sit. Posse appetere convenire et vel, usu eu impetus blandit, ne velit consetetur eam. Dicat omnium nam ei, ut ius mutat nemore instructior. Vero elitr fierent nec ea, quas noster
-                        splendide no pri. Ut nibh nonumes his, posse nulla suscipiantur his ne. Debet tempor his ea, qui lorem tacimates at. No est natum movet mediocritatem, ex mei soleat accommodare, nobis apeirian eloquentiam eam te. <a class="read-more"
-                        href="/post/camaro/">&raquo;</a></p>
+                        splendide no pri. Ut nibh nonumes his, posse nulla suscipiantur his ne. Debet tempor his ea, qui lorem tacimates at. No est natum movet mediocritatem, ex mei soleat accommodare, nobis apeirian eloquentiam eam te.
                 </section>
                 <!-- Author Tag -->
                 <footer class="post-meta">
@@ -134,18 +137,44 @@
 
     </div>
 
-    <script type="text/javascript" src="./js/jquery.js"></script>
-    <script type="text/javascript" src="./js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
-    <script type="text/javascript" src="./js/scrollReveal.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-sidebar/jquery.sidebar.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/scrollReveal.min.js"></script>
     <script>window.sr = new scrollReveal();</script>
-    <script type="text/javascript" src="./js/lib/waypoints/lib/noframework.waypoints.min.js"></script>
-    <script type="text/javascript" src="./js/googleAnalytics.js"></script>
+    <script type="text/javascript" src="/js/lib/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script type="text/javascript" src="/js/googleAnalytics.js"></script>
 
-    <script src="./js/lib/instantclick/instantclick.js" data-no-instant></script>
+    <script src="/js/lib/instantclick/instantclick.js" data-no-instant></script>
     <script data-no-instant>InstantClick.init();</script>
 
-    <script type="text/javascript" src="./js/splashController.js"></script>
+    <script type="text/javascript" src="/js/splashController.js"></script>
+
+    <script>
+    $("#articleSideBar").sidebar({side: "right"});
+    function openArticle(articleLink) {
+        console.log(articleLink);
+        $.get(articleLink, function(data) {
+            var elements = $(data);
+            var content = $(".content", elements);
+            $("#articleSideBar").append("<div id=articleSideBarContent></div>");
+            $("#articleSideBarContent").html(content);
+            $.ajax({
+                url: "/js/disqus.js",
+                dataType: "script",
+                success: function() {
+                    console.log("success.");
+                }
+            });
+        });
+        $("#articleSideBar").trigger("sidebar:open");
+    }
+    function closeMe() {
+        $("#articleSideBarContent").remove();
+        $("#articleSideBar").trigger("sidebar:close");
+    }
+    </script>
 
 </body>
 </html>

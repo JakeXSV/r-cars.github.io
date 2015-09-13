@@ -46,3 +46,21 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+#articleSideBar {
+    position: fixed;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85%;
+    text-align: center;
+    background-color: #FFFFFF;
+    z-index: 999;
+}
+
+#articleSideBarContent {
+    overflow: visible;
+    overflow-y: scroll;
+    height: 100%;
+}
