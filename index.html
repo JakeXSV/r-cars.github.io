@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta property="og:title" content=" rcars" />
     <meta property="og:site_name" content="rcars" />
-    <meta property="og:url" content="http://r-cars.github.io/r-cars/" />
+    <meta property="og:url" content="http://r-cars.github.io/" />
     <meta property="og:type" content="website" />
     <title>
         rcars
@@ -14,11 +14,13 @@
     <meta name="description" content="everything automotive" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="http://r-cars.github.io/r-cars/images/favicon.ico">
-    <link rel="apple-touch-icon" href="http://r-cars.github.io/r-cars/images/apple-touch-icon.png" />
-    <link rel="stylesheet" type="text/css" href="http://r-cars.github.io/r-cars/css/screen.css" />
+    <script type="text/javascript" src="/js/lib/isMobile/isMobile.min.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
-    <link rel="canonical" href="http://r-cars.github.io/r-cars/" />
+    <link rel="canonical" href="http://r-cars.github.io/" />
 </head>
 
 <body class="nav-closed">
@@ -30,28 +32,26 @@
         </a>
         <ul>
         </ul>
-        <a class="subscribe-button icon-feed" href="#">Subscribe</a>
     </div>
 
     <span class="nav-cover"></span>
 
     <div class="site-wrapper">
-        <header class="main-header " style="background-image: url(http://r-cars.github.io/r-cars/images/background.jpg)">
-            <nav class="main-nav overlay clearfix">
-                <a class="blog-logo" href="http://r-cars.github.io/r-cars/">
-                    <img src="http://r-cars.github.io/r-cars/images/logo.png" alt="Blog Logo" />
-                </a>
-                <a class="menu-button icon-feed" href="#">&nbsp;&nbsp;Subscribe</a>
+
+        <header id="splashHeader" class="main-header">
+            <nav class="main-nav overlay clearfix" style="text-align:right;">
+                <div class="headerSocialVerticalCenter">
+                    <a target="_blank" href="https://github.com/Jakehp" class="transparentHover">
+                        <span class="icon-github socialIcon"></span>
+                    </a>
+                    &nbsp;
+                    <a target="_blank" href="https://twitter.com/JakeXsV" class="transparentHover">
+                        <span class="icon-twitter socialIcon"></span>
+                    </a>
+                </div>
             </nav>
             <div class="vertical">
                 <div class="main-header-content inner">
-                    <a href="https://github.com/Jakehp">
-                        <span class="icon-github" style="color:white;font-size:2em"></span>
-                    </a>
-                    &nbsp;
-                    <a class="bloglogo" href="https://twitter.com/JakeXsV">
-                        <span class="icon-twitter" style="color:white;font-size:2em"></span>
-                    </a>
                     <h1 class="page-title">rcars</h1>
                     <h2 class="page-description">everything automotive</h2>
                 </div>
@@ -61,29 +61,26 @@
             </a>
         </header>
 
-        <main id="content" class="content" role="main">
+        <main id="content" class="content headerPadding" role="main">
 
-            <div class="extra-pagination inner">
-                <nav class="pagination" role="navigation">
-                    <span class="page-number">Page 1 of 1</span>
-                </nav>
+            <div id="articleSideBar">
+                <button onclick="closeMe();">close</button>
             </div>
 
-            <!-- Post -->
-            <article class="post post">
+            <article id="article2" class="post post" data-sr='enter top, over 1s'>
                 <header class="post-header">
-                    <h2 class="post-title"><a href="/r-cars/post/cayman/">cayman</a></h2>
+                    <h2 class="post-title"><a onclick="openArticle('/post/2015/8/15ChallengerRTScat');">15' Challenger Scat Pack</a></h2>
                 </header>
                 <section class="post-excerpt">
-                    <p>Eum ad alii libris theophrastus, sed solet prompta consequuntur no. Ea has novum postea, cetero albucius at nam. Cu usu novum congue. Nam dicta deserunt eu, tibique molestiae ex nam. Mei sint verterem ad. Per choro mollis admodum ad,
-                        ius audire inermis id. Vim meis movet mucius ea, altera voluptatum repudiandae no sed. Voluptatum interesset est eu. Mea diceret lucilius id. Et vide consul perpetua vis. Agam equidem qualisque ei mea, at qui recusabo definiebas,
-                        malis tollit petentium nam ne. <a class="read-more" href="/r-cars/post/cayman/">&raquo;</a></p>
+                    <p>“We’ll see you coming from a mile away in this thing, good luck!” he wasn’t wrong. At 17 feet long and 6 feet wide,
+                    coming in at 4200 pounds and sporting a burn-your-eyes-out green paint job, this 2015 Dodge Challenger R/T Scat Pack
+                    was hard to miss.
                 </section>
-                <!-- Author Tag -->
                 <footer class="post-meta">
-                    <img class="author-thumb" src="http://r-cars.github.io/r-cars/images/logo.png" alt="Author image" nopin="nopin" /> on
-                    <a href="http://r-cars.github.io/r-cars/tags/german/">#German</a>,
-                    <a href="http://r-cars.github.io/r-cars/tags/porsche/">#Porsche</a>,
+                    <img class="author-thumb" src="../images/logo.png" alt="Author image" nopin="nopin" /> on
+                    <a href="/tags/american/">#American</a>,
+                    <a href="/tags/muscle/">#Muscle</a>,
+                    <a href="/tags/dodge/">#Dodge</a>,
                     <time class="post-date" datetime="2015-07-21T20:55:19-05:00">
                         21 Jul 2015
                     </time>
@@ -91,20 +88,20 @@
             </article>
 
             <!-- Post -->
-            <article class="post post">
+            <article id="article1" class="post post" data-sr='enter top, over 1s'>
                 <header class="post-header">
-                    <h2 class="post-title"><a href="/r-cars/post/hellcat/">hellcat</a></h2>
+                    <h2 class="post-title"><a href="/post/hellcat/">hellcat</a></h2>
                 </header>
                 <section class="post-excerpt">
                     <p>Commodo platonem constituam vel ea, ut vide dicit albucius usu. Exerci graece maluisset in eam, cu nulla postulant pro. Fierent explicari ne est. Vis summo detracto ei. Ex noster eruditi principes vis, dicunt graecis mei eu. Ei amet
                         convenire erroribus ius, pro nonumes noluisse signiferumque te. Sit quod quando te, erat omittam appellantur nec ne. Eos in modo semper bonorum. Cu sea porro falli iusto, laoreet tractatos voluptatum mea ei. Cum eu persequeris
-                        conclusionemque, tota nominavi in nec. <a class="read-more" href="/r-cars/post/hellcat/">&raquo;</a></p>
+                        conclusionemque, tota nominavi in nec.
                 </section>
                 <!-- Author Tag -->
                 <footer class="post-meta">
-                    <img class="author-thumb" src="http://r-cars.github.io/r-cars/images/logo.png" alt="Author image" nopin="nopin" /> on
-                    <a href="http://r-cars.github.io/r-cars/tags/american/">#American</a>,
-                    <a href="http://r-cars.github.io/r-cars/tags/muscle/">#Muscle</a>,
+                    <img class="author-thumb" src="./images/logo.png" alt="Author image" nopin="nopin" /> on
+                    <a href="/tags/american/">#American</a>,
+                    <a href="/tags/muscle/">#Muscle</a>,
                     <time class="post-date" datetime="2015-07-21T20:55:07-05:00">
                         21 Jul 2015
                     </time>
@@ -112,29 +109,25 @@
             </article>
 
             <!-- Post -->
-            <article class="post post">
+            <article id="article0" class="post post" data-sr='enter top, over 1s'>
                 <header class="post-header">
-                    <h2 class="post-title"><a href="/r-cars/post/camaro/">camaro</a></h2>
+                    <h2 class="post-title"><a href="/post/camaro/">camaro</a></h2>
                 </header>
+                <div data-ot="The content" data-ot-delay="2" data-ot-hide-trigger="closeButton">Hover me</div>
                 <section class="post-excerpt">
                     <p>At quo suavitate hendrerit, reque nemore sensibus ne sit. Posse appetere convenire et vel, usu eu impetus blandit, ne velit consetetur eam. Dicat omnium nam ei, ut ius mutat nemore instructior. Vero elitr fierent nec ea, quas noster
-                        splendide no pri. Ut nibh nonumes his, posse nulla suscipiantur his ne. Debet tempor his ea, qui lorem tacimates at. No est natum movet mediocritatem, ex mei soleat accommodare, nobis apeirian eloquentiam eam te. <a class="read-more"
-                        href="/r-cars/post/camaro/">&raquo;</a></p>
+                        splendide no pri. Ut nibh nonumes his, posse nulla suscipiantur his ne. Debet tempor his ea, qui lorem tacimates at. No est natum movet mediocritatem, ex mei soleat accommodare, nobis apeirian eloquentiam eam te.
                 </section>
                 <!-- Author Tag -->
                 <footer class="post-meta">
-                    <img class="author-thumb" src="http://r-cars.github.io/r-cars/images/logo.png" alt="Author image" nopin="nopin" /> on
-                    <a href="http://r-cars.github.io/r-cars/tags/american/">#American</a>,
-                    <a href="http://r-cars.github.io/r-cars/tags/muscle/">#Muscle</a>,
+                    <img class="author-thumb" src="./images/logo.png" alt="Author image" nopin="nopin" /> on
+                    <a href="/tags/american/">#American</a>,
+                    <a href="/tags/muscle/">#Muscle</a>,
                     <time class="post-date" datetime="2015-07-21T20:54:38-05:00">
                         21 Jul 2015
                     </time>
                 </footer>
             </article>
-
-            <nav class="pagination" role="navigation">
-                <span class="page-number">Page 1 of 1</span>
-            </nav>
 
         </main>
 
@@ -144,10 +137,44 @@
 
     </div>
 
-    <script type="text/javascript" src="http://r-cars.github.io/r-cars/js/jquery.js"></script>
-    <script type="text/javascript" src="http://r-cars.github.io/r-cars/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="http://r-cars.github.io/r-cars/js/index.js"></script>
-    <script type="text/javascript" src="http://r-cars.github.io/r-cars/js/googleAnalytics.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-sidebar/jquery.sidebar.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/scrollReveal.min.js"></script>
+    <script>window.sr = new scrollReveal();</script>
+    <script type="text/javascript" src="/js/lib/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script type="text/javascript" src="/js/googleAnalytics.js"></script>
+
+    <script src="/js/lib/instantclick/instantclick.js" data-no-instant></script>
+    <script data-no-instant>InstantClick.init();</script>
+
+    <script type="text/javascript" src="/js/splashController.js"></script>
+
+    <script>
+    $("#articleSideBar").sidebar({side: "right"});
+    function openArticle(articleLink) {
+        console.log(articleLink);
+        $.get(articleLink, function(data) {
+            var elements = $(data);
+            var content = $(".content", elements);
+            $("#articleSideBar").append("<div id=articleSideBarContent></div>");
+            $("#articleSideBarContent").html(content);
+            $.ajax({
+                url: "/js/disqus.js",
+                dataType: "script",
+                success: function() {
+                    console.log("success.");
+                }
+            });
+        });
+        $("#articleSideBar").trigger("sidebar:open");
+    }
+    function closeMe() {
+        $("#articleSideBarContent").remove();
+        $("#articleSideBar").trigger("sidebar:close");
+    }
+    </script>
 
 </body>
 </html>
