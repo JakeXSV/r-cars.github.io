@@ -15,7 +15,7 @@ $(window).scroll(
             if (!articleWaypointsInitialized && isMobile.any) {
                 // Scroll down first article
                 new Waypoint({
-                    element: document.getElementById("article2"),
+                    element: document.getElementsByClassName("article2"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
                             $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/headerf.jpg)");
