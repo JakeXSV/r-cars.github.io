@@ -64,3 +64,15 @@
     overflow-y: scroll;
     height: 100%;
 }
+
+.article-close {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #3A4145;
+  background-color: transparent;
+  border: none;
+  font-size: 1.3em;
+  float: left;
+  outline: none;
+  padding: 15px 25px
+}

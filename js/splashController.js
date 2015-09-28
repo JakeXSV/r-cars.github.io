@@ -15,7 +15,8 @@ $(window).scroll(
             if (!articleWaypointsInitialized && isMobile.any) {
                 // Scroll down first article
                 new Waypoint({
-                    element: document.getElementById("article2"),
+                  //this was driving me crazy - changed from id article 2 to first post-title
+                    element: document.getElementsByClassName(".post-title").first();,
                     handler: function(direction) {
                         if (isSplashMinimized) {
                             $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/headerf.jpg)");
