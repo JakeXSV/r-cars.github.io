@@ -55,21 +55,25 @@ $(window).scroll(
             }
         }
 
+        //on hover, splashSelector fadesIn to new image
         function setHoverpoints() {
             if (!articleHoverpointsInitialized && !isMobile.any) {
                 $("#article2").hover(function(){
-                    if (isSplashMinimized) {
-                        $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/headerf.jpg)");
-                    }
+                  if (isSplashMinimized) {
+                    $(splashSelector).css("display", "none");
+                    $(splashSelector).fadeIn(700).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/headerf.jpg)");
+                  }
                 });
                 $("#article1").hover(function(){
                     if (isSplashMinimized) {
-                        $(splashSelector).css("background-image", "url(images/posts/hellcat/header.jpg)");
+                        $(splashSelector).css("display", "none");
+                        $(splashSelector).fadeIn(700).css("background-image", "url(images/posts/hellcat/header.jpg)");
                     }
                 });
                 $("#article0").hover(function(){
                     if (isSplashMinimized) {
-                        $(splashSelector).css("background-image", "url(images/posts/camaro/header.jpg)");
+                        $(splashSelector).css("display", "none");
+                        $(splashSelector).fadeIn(700).css("background-image", "url(images/posts/camaro/header.jpg)");
                     }
                 });
                 articleHoverpointsInitialized = true;
