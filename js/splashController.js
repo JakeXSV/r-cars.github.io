@@ -18,7 +18,7 @@ $(window).scroll(
                     element: document.getElementsByClassName("article2"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/headerf.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/2015/08/15ChallengerRTScat/headerf.jpg)");
                         }
                     },
                     offset: '50%'
@@ -28,7 +28,7 @@ $(window).scroll(
                     element: document.getElementById("article2"),
                     handler: function(direction) {
                         if (isSplashMinimized) {
-                            $(splashSelector).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/headerf.jpg)");
+                            $(splashSelector).css("background-image", "url(images/posts/2015/08/15ChallengerRTScat/headerf.jpg)");
                         }
                     },
                     offset: '40%'
@@ -61,7 +61,7 @@ $(window).scroll(
                 $("#article2").hover(function(){
                   if (isSplashMinimized) {
                     $(splashSelector).css("display", "none");
-                    $(splashSelector).fadeIn(700).css("background-image", "url(images/posts/2015/8/15ChallengerRTScat/headerf.jpg)");
+                    $(splashSelector).fadeIn(700).css("background-image", "url(images/posts/2015/08/15ChallengerRTScat/headerf.jpg)");
                   }
                 });
                 $("#article1").hover(function(){
