@@ -1,12 +1,12 @@
 /* Splash screen and header */
 #splashHeader {
     z-index: 999;
-    background-image: url(http://r-cars.github.io/images/background.jpg);
+    background-image: url(http://r-cars.github.io/images/newbackground.jpg);
 }
 .splashMaximized {
     height: 100vh;
     position: relative;
-    background-image: url(http://r-cars.github.io/images/background.jpg);
+    background-image: url(http://r-cars.github.io/images/newbackground.jpg);
 }
 .splashMinimized {
     height: 15vh;
