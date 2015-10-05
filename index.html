@@ -18,6 +18,7 @@
     <link rel="shortcut icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
     <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" href="genericons.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
     <link rel="canonical" href="http://r-cars.github.io/" />
@@ -62,6 +63,13 @@
         </header>
 
         <main id="content" class="content headerPadding" role="main">
+          <i class="genericon genericon-search" title="genericon-search"></i>
+          <input class="search-text" placeholder="search...">
+          
+          <div id="no-results">
+            <p>Sorry, there aren't any matches for that search.</p>
+            <p>Go ahead, try again!</p>
+          </div>
 
             <div id="articleSideBar">
                 <button class ="article-close" onclick="closeMe();">X</button>
