@@ -1,0 +1,44 @@
+{
+  "articles": [
+  {
+    "title": "15 Challenger Scat Pack",
+    "url": "/post/2015/08/15ChallengerRTScat",
+    "words":
+      ["scat pack",
+        "dodge",
+        "challenger"
+      ],
+    "tags": [
+      "american",
+      "muscle"
+    ],
+    "author": "cody stewart"
+  },
+  {
+
+    "title": "15' Mazda6",
+    "url": "/post/2015/09/15Mazda6/index.html",
+    "words": [
+      "mazda",
+      "sedan"
+      ],
+    "tags": [
+      "japanese",
+      "midsize"
+      ],
+    "author": "kit"
+  },
+  {
+    "title": "Hellcat",
+    "url": "/post/hellcat/",
+    "words": [
+      "fake data1",
+      "fake data2"
+      ],
+    "tags": [
+      "american",
+      "muscle"
+      ],
+    "author": "fake"
+  }
+]}
