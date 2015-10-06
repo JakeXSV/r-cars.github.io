@@ -76,3 +76,66 @@
   outline: none;
   padding: 15px 25px
 }
+.genericon-search {
+  text-align: left;
+  font-size: 1.5em;
+  color: #666;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  left: 97%;
+  padding-right: 1%;
+}
+
+.search-text {
+  display: none;
+  float: right;
+  margin-right: 3.5%;
+  outline: none;
+  border-radius: 50px;
+  border: 1px solid #bababa;
+  height: 30px;
+  width: 17%;
+  font-size: 0.7em;
+  padding-left: 35px;
+  font-family: tahoma, sans-serif;
+}
+
+#no-results {
+  display: none;
+  color: #666;
+  font-weight: 600;
+  font-family: tahoma, sans-serif;
+  font-size: 1.7em;
+  line-height: 0.5;
+  padding-top: 100px;
+  text-align: center;
+}
+
+@media (max-width: 1005px) {
+  .genericon-search {
+    left: 95%;
+  }
+  .search-text {
+    margin-right: 6%;
+    width: 20%;
+  }
+}
+
+@media (max-width: 800px) {
+  .search-text {
+    width: 80%;
+  }
+  .post-title:nth-of-type(1) {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .genericon-search {
+    left: 93%;
+  }
+  .search-text {
+    margin-right: 7%;
+  }
+}
