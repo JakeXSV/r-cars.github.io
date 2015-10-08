@@ -1,8 +1,9 @@
-
+//show search text area on click of search icon
 $('.genericon-search').on('click', function(e) {
     $('.search-text').animate({width: 'toggle'}, '200');;
 })
 
+//search function
 var $articleTitles = $('.post-title');
 var searchTerm = "";
 
