@@ -1,4 +1,3 @@
-
 $("#articleSideBar").sidebar({side: "right"});
 function openArticle(articleLink) {
     console.log(articleLink);
@@ -8,7 +7,7 @@ function openArticle(articleLink) {
         $("#articleSideBar").append("<div id=articleSideBarContent></div>");
         $("#articleSideBarContent").html(content);
         $.ajax({
-            url: "/js/disqus.js",
+            url: "/js/3rdParty/disqus.js",
             dataType: "script",
             success: function() {
                 console.log("success.");
