@@ -1,14 +1,4 @@
-[
-  {
-    "articleUrl": "/post/2015/08/15ChallengerRTScat",
-    "searchWords": ["15 Challenger Scat Pack", "dodge","challenger","american","muscle","cody stewart" ]
-  },
-  {
-    "articleUrl": "post/2015/09/15Mazda6/index.html",
-    "searchWords": ["15' Mazda6", "mazda", "sedan", "midsize", "japanese", "author" ]
-    },
-    {
-      "articleUrl": "/post/hellcat/",
-      "searchWords": ["american", "muscle" ]
-    }
-  ]
+{
+    "scat pack dodge challenger american muscle cody stewart": "/post/2015/08/15ChallengerRTScat",
+    "mazda6 mazda sedan midsize japanese": "/post/2015/09/15Mazda6"
+}

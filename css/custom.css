@@ -58,13 +58,11 @@
     background-color: #FFFFFF;
     z-index: 999;
 }
-
 #articleSideBarContent {
     overflow: visible;
     overflow-y: scroll;
     height: 100%;
 }
-
 .article-close {
   font-family: sans-serif;
   font-weight: 100;
@@ -85,8 +83,8 @@
   z-index: 1;
   left: 97%;
   padding-right: 1%;
+  margin-top: 150px;
 }
-
 .search-text {
   display: none;
   float: right;
@@ -99,8 +97,8 @@
   font-size: 0.7em;
   padding-left: 35px;
   font-family: tahoma, sans-serif;
+  margin-top: 150px;
 }
-
 #no-results {
   display: none;
   color: #666;
