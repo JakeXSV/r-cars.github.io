@@ -31,7 +31,6 @@
     top: 60%;
     transform: translateY(-50%);
 }
-
 /* Article styles */
 .headerPadding {
     padding-top: 25vh;
@@ -46,7 +45,6 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
 #articleSideBar {
     position: fixed;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
@@ -63,7 +61,7 @@
     overflow-y: scroll;
     height: 100%;
 }
-.article-close {
+.articleClose {
   font-family: sans-serif;
   font-weight: 100;
   color: #3A4145;
@@ -85,7 +83,7 @@
   padding-right: 1%;
   margin-top: 150px;
 }
-.search-text {
+.searchText {
   display: none;
   float: right;
   margin-right: 3.5%;
@@ -99,9 +97,10 @@
   font-family: tahoma, sans-serif;
   margin-top: 150px;
 }
-#no-results {
+#searchNoResults {
   display: none;
   color: #666;
+  width: 100%;
   font-weight: 600;
   font-family: tahoma, sans-serif;
   font-size: 1.7em;
@@ -109,19 +108,18 @@
   padding-top: 100px;
   text-align: center;
 }
-
 @media (max-width: 1005px) {
   .genericon-search {
     left: 95%;
   }
-  .search-text {
+  .searchText {
     margin-right: 6%;
     width: 20%;
   }
 }
 
 @media (max-width: 800px) {
-  .search-text {
+  .searchText {
     width: 80%;
   }
   .post-title:nth-of-type(1) {
@@ -133,7 +131,7 @@
   .genericon-search {
     left: 93%;
   }
-  .search-text {
+  .searchText {
     margin-right: 7%;
   }
 }
