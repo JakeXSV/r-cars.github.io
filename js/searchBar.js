@@ -1,41 +1,39 @@
+
 var searchData = {};
 $.get("/search.json", function(data) {
     searchData = data;
 });
 $('.genericon-search').on('click', function(e) {
-    $('.search-text').animate({
+    $('.searchText').animate({
         width: 'toggle'
     }, '200');
 });
-var searchTerm = '';
-$(".search-text").on('keydown', function(e) {
-    var EscapeKeyCode = 27;
-    var BackspaceKeyCode = 8;
-    if (e.keyCode === EscapeKeyCode) {
-        searchTerm = '';
+$("#searchInput").on('input', function() {
+    searchJson($(this).val(), searchData);
+});
+$("#searchInput").on('keydown', function(e) {
+    if (e.keyCode === 27) {
+        $("#searchNoResults").hide();
         $("#searchInput").val("");
         $("#searchResults").html("");
-        $('.search-text').animate({
+        $('.searchText').animate({
             width: 'toggle'
         }, '200');
         setTimeout(function() {
             $("article").show();
         }, 250);
     }
-    if (e.keyCode === BackspaceKeyCode) {
-        if (searchTerm.length >= 1) {
-            searchTerm = searchTerm.substring(0, searchTerm.length - 1);
-            searchJson(searchTerm, searchData);
-        } else {
-            $("article").show();
-            $("#searchResults").html("");
-        }
-    } else {
-        searchTerm += String.fromCharCode(e.keyCode);
-        searchJson(searchTerm, searchData);
-    }
 });
+function showNoSearchResults() {
+    $("#searchNoResults").show();
+    $("#searchNoResults").css("display", "inline-block");
+}
 function searchJson(text, dataSet) {
+    if (text.length === 0) {
+        $("#searchResults").html("");
+        $("article").show();
+        return;
+    }
     text = text.toLowerCase();
     var foundArticles = [];
     for (var prop in dataSet) {
@@ -44,11 +42,17 @@ function searchJson(text, dataSet) {
         }
     }
     var resultHtml = '';
-    foundArticles.forEach(function(article){
-        resultHtml += loadData(article);
-    });
-    $("#searchResults").html(resultHtml);
-    $("article").hide();
+    if (foundArticles.length === 0) {
+        $("#searchResults").html("");
+        showNoSearchResults();
+    } else {
+        foundArticles.forEach(function(article){
+            resultHtml += loadData(article);
+        });
+        $("#searchNoResults").hide();
+        $("#searchResults").html(resultHtml);
+        $("article").hide();
+    }
 }
 function loadData(data) {
     var template = searchStartTemplate.replace("{url}", data.url);
