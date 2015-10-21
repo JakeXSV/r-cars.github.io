@@ -5,11 +5,24 @@ $.get("/search.json", function(data) {
 $('.genericon-search').on('click', function(e) {
     $('.search-text').animate({
         width: 'toggle'
-    }, '200');;
+    }, '200');
 });
 var searchTerm = '';
 $(".search-text").on('keydown', function(e) {
-    if (e.keyCode === 8) {
+    var EscapeKeyCode = 27;
+    var BackspaceKeyCode = 8;
+    if (e.keyCode === EscapeKeyCode) {
+        searchTerm = '';
+        $("#searchInput").val("");
+        $("#searchResults").html("");
+        $('.search-text').animate({
+            width: 'toggle'
+        }, '200');
+        setTimeout(function() {
+            $("article").show();
+        }, 250);
+    }
+    if (e.keyCode === BackspaceKeyCode) {
         if (searchTerm.length >= 1) {
             searchTerm = searchTerm.substring(0, searchTerm.length - 1);
             searchJson(searchTerm, searchData);
