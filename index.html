@@ -63,12 +63,13 @@
 
         <main id="content" class="content headerPadding" role="main">
 
-          <i class="genericon genericon-search" title="genericon-search"></i>
-          <input class="search-text" placeholder="search...">
-          <div id="no-results">
-            <p>Sorry, there aren't any matches for that search.</p>
-            <p>Go ahead, try again!</p>
-          </div>
+            <i class="genericon genericon-search" title="genericon-search"></i>
+            <input class="search-text" placeholder="search...">
+            <div id="no-results">
+                <p>Sorry, there aren't any matches for that search.</p>
+                <p>Go ahead, try again!</p>
+            </div>
+            <div id="searchResults"></div>
 
             <div id="articleSideBar">
                 <button class ="article-close" onclick="closeMe();">X</button>
@@ -79,9 +80,11 @@
                     <h2 class="post-title"><a class="open-article" data-href="/post/2015/08/15ChallengerRTScat">15' Challenger Scat Pack</a></h2>
                 </header>
                 <section class="post-excerpt">
-                    <p>“We’ll see you coming from a mile away in this thing, good luck!” he wasn’t wrong. At 17 feet long and 6 feet wide,
-                    coming in at 4200 pounds and sporting a burn-your-eyes-out green paint job, this 2015 Dodge Challenger R/T Scat Pack
-                    was hard to miss.
+                    <p>
+                        “We’ll see you coming from a mile away in this thing, good luck!” he wasn’t wrong. At 17 feet long and 6 feet wide,
+                        coming in at 4200 pounds and sporting a burn-your-eyes-out green paint job, this 2015 Dodge Challenger R/T Scat Pack
+                        was hard to miss.
+                    </p>
                 </section>
                 <footer class="post-meta">
                     <img class="author-thumb" src="../images/logo.png" alt="Author image" nopin="nopin" /> on
@@ -106,7 +109,7 @@
                 </section>
                 <!-- Author Tag -->
                 <footer class="post-meta">
-                    <img class="author-thumb" src="./images/logo.png" alt="Author image" nopin="nopin" /> on
+                    <img class="author-thumb" src="./images/logo.png" alt="Author image" nopin="nopin" /> Cody Stewart on
                     <a href="/tags/american/">#American</a>,
                     <a href="/tags/muscle/">#Muscle</a>,
                     <time class="post-date" datetime="2015-07-21T20:55:07-05:00">
@@ -148,6 +151,7 @@
 
     <script type="text/javascript" src="/js/3rdParty/jquery.js"></script>
     <script type="text/javascript" src="/js/3rdParty/jquery-sidebar/jquery.sidebar.min.js"></script>
+    <script type="text/javascript" src="/js/lib/multiline/browser.js"></script>
     <script type="text/javascript" src="/js/lib/isMobile/isMobile.min.js"></script>
     <script type="text/javascript" src="/js/3rdParty/jquery.fitvids.js"></script>
     <script type="text/javascript" src="/js/3rdParty/index.js"></script>
