@@ -1,1 +1,8 @@
-assets
+build
+assets/css
+assets/fonts
+assets/images
+assets/js/custom.js
+assets/js/html5.js
+assets/js/plugins.js
+assets/favicon.ico
